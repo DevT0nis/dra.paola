@@ -1,0 +1,249 @@
+.sec-avaliacoes {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.title {
+    font: normal 500 32px 'Poppins', sans-serif;
+    color: #8DA39D;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.review-section {
+    height: 70vh;
+    width: 90vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #8DA39D;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+@media (max-width: 1200px) {
+    .avatar {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .avatar {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .avatar {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 360px) {
+    .avatar {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    cursor: grab;
+    width: 50%;
+    gap: 50px;
+    
+}
+
+.review-card {
+    flex: 0 0 80%;
+    box-sizing: border-box;
+    padding: 20px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    border: none;
+    border-radius: 25px;
+    color: black;
+    box-shadow: 0 10px 50px rgba(59, 58, 64, 0.7);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    backdrop-filter: blur(10px);
+    transform-origin: center center;
+    transition: transform 0.3s ease;
+
+}
+
+.review-card:hover {
+    background-color: #f2fefb;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.client-name {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.comment {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.stars {
+    color: #ffcc00;
+    font-size: 20px;
+}
+
+@media (max-width: 1200px) {
+    .title {
+        font-size: 28px;
+    }
+
+    .review-section {
+        width: 85vw;
+        padding: 15px;
+    }
+
+    .review-card {
+        flex: 0 0 80%;
+        margin: 0 auto;
+    }
+
+    .client-name {
+        font-size: 22px;
+    }
+
+    .comment {
+        font-size: 16px;
+    }
+
+    .stars {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 24px;
+    }
+
+    .review-section {
+        width: 90vw;
+    }
+
+    .review-card {
+        flex: 0 0 90%;
+        padding: 15px;
+    }
+    .client-name {
+        font-size: 20px;
+    }
+
+    .comment {
+        font-size: 16px;
+    }
+
+    .stars {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 20px;
+    }
+
+    .review-section {
+  
+        width: 100vw;
+        padding: 10px;
+    }
+
+    .review-card {
+      
+        flex: 0 0 100%;
+        height: 400px;
+        padding: 10px;
+    }
+
+    .client-name {
+        font-size: 18px;
+    }
+
+    .comment {
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .stars {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .title {
+        font-size: 18px;
+    }
+
+    .client-name {
+        font-size: 16px;
+    }
+
+    .comment {
+        font-size: 12px;
+    }
+
+    .stars {
+        font-size: 12px;
+    }
+}
