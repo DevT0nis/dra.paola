@@ -321,7 +321,7 @@ header .navbar .btn-header {
 }
 .treatment .cards .card-treatment {
   width: 290px;
-  height: 132px;
+  height: 162px;
   padding: 30px 12px 38px 10px;
   border-radius: 5px;
   box-shadow: 1px 3px 5px 1px #8DA39D;
@@ -382,10 +382,32 @@ header .navbar .btn-header {
   .card-treatment  {
     font-size: 18px;
     width: 500px;
-    height: 450px;
+    height: 550px;
   }
 }
+@media screen and (max-width:730px) {
+  .card-treatment  {
+    font-size: 18px;
+    width: 500px;
+    height: 650px;
+  }
+}
+@media screen and (max-width:430px) {
+  .card-treatment  {
+    font-size: 18px;
+    width: 500px;
+    height: 650px;
 
+  }
+  }
+
+@media screen and (max-width:360px) {
+  .card-treatment  {
+    font-size: 18px;
+    width: 500px;
+    height: 550px;
+  }
+}
 .conteiner-contact {
   width: 68%;
   height: 22rem;

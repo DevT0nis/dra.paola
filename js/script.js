@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const carousel = document.getElementById('reviews-carousel');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
 
     reviewsData.forEach((review) => {
         const reviewCard = document.createElement('div');
@@ -130,6 +132,9 @@ document.addEventListener("DOMContentLoaded", () => {
             currentTranslate = prevTranslate + currentPosition - startPos;
         }
     };
+
+    prevButton.addEventListener('click', moveToPrev);
+    nextButton.addEventListener('click', moveToNext);
 
     carousel.addEventListener('mousedown', handleMouseDown);
     carousel.addEventListener('touchstart', handleTouchStart);

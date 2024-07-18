@@ -12,6 +12,33 @@
     gap: 50px;
 }
 
+
+.nav-button {
+    background-color: rgba(0, 0, 0, 0.5);
+   width: 50px;
+   height: 50px;
+    border-radius: 100%;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+
+#prevButton {
+    left: 10px;
+}
+
+#nextButton {
+    right: 10px;
+}
+
+
+
 .title {
     font: normal 500 32px 'Poppins', sans-serif;
     color: #8DA39D;
@@ -150,13 +177,16 @@
     }
 
     .review-section {
-        width: 85vw;
+        width: 100vw;
         padding: 15px;
     }
 
     .review-card {
-        flex: 0 0 80%;
-        margin: 0 auto;
+        flex: 0 0 150%; /* Mostrar apenas um card por vez */
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        margin: 0 5px; /* Espaçamento reduzido entre os cards */
     }
 
     .client-name {
@@ -182,8 +212,12 @@
     }
 
     .review-card {
-        flex: 0 0 90%;
-        padding: 15px;
+        flex: 0 0 150%; /* Mostrar apenas um card por vez */
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        margin: 0 5px; /* Espaçamento reduzido entre os cards */
+        padding: 15px;    
     }
     .client-name {
         font-size: 20px;
@@ -242,6 +276,22 @@
     .client-name {
         font-size: 16px;
     }
+
+    .review-section {
+        width: 120vw;
+        height: 100vh;
+   
+    }
+
+ 
+    .review-card {
+        flex: 0 0 150%; /* Mostrar apenas um card por vez */
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        margin: 0 5px; /* Espaçamento reduzido entre os cards */
+    }
+
 
     .comment {
         font-size: 12px;
