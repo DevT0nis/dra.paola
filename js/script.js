@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const prevButton = document.getElementById('prevButton');
     const nextButton = document.getElementById('nextButton');
 
-    reviewsData.forEach((review) => {
+     // Criação dos cards de avaliação
+     reviewsData.forEach((review) => {
         const reviewCard = document.createElement('div');
         reviewCard.className = 'review-card';
 
@@ -35,17 +36,25 @@ document.addEventListener("DOMContentLoaded", () => {
         carousel.appendChild(reviewCard);
     });
 
+    // Clone do primeiro e último card
+    const firstCard = carousel.firstElementChild.cloneNode(true);
+    const lastCard = carousel.lastElementChild.cloneNode(true);
+
+    carousel.appendChild(firstCard);
+    carousel.insertBefore(lastCard, carousel.firstChild);
+
     let isDragging = false;
     let startPos = 0;
     let currentTranslate = 0;
     let prevTranslate = 0;
     let animationID;
-    let currentIndex = 0;
+    let currentIndex = 1; // Start no segundo card (original) para loop infinito
+    const cardWidth = carousel.firstElementChild.offsetWidth;
+    const totalCards = carousel.children.length;
 
-    const reviewsLength = reviewsData.length;
-
+    // Define a posição inicial
     const setPositionByIndex = () => {
-        currentTranslate = currentIndex * -carousel.offsetWidth;
+        currentTranslate = currentIndex * -cardWidth;
         prevTranslate = currentTranslate;
         setCarouselPosition();
     };
@@ -55,14 +64,36 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const moveToNext = () => {
-        if (currentIndex < reviewsLength - 1) {
+        if (currentIndex >= totalCards - 1) {
+            currentIndex = 1; // Pular para o primeiro card original
+            setPositionByIndex();
+            setTimeout(() => {
+                carousel.style.transition = 'none';
+                currentTranslate = currentIndex * -cardWidth;
+                setCarouselPosition();
+                setTimeout(() => {
+                    carousel.style.transition = 'transform 0.5s ease-in-out';
+                }, 20);
+            }, 500);
+        } else {
             currentIndex++;
             setPositionByIndex();
         }
     };
 
     const moveToPrev = () => {
-        if (currentIndex > 0) {
+        if (currentIndex <= 0) {
+            currentIndex = totalCards - 2; // Ir para o último card original
+            setPositionByIndex();
+            setTimeout(() => {
+                carousel.style.transition = 'none';
+                currentTranslate = currentIndex * -cardWidth;
+                setCarouselPosition();
+                setTimeout(() => {
+                    carousel.style.transition = 'transform 0.5s ease-in-out';
+                }, 20);
+            }, 500);
+        } else {
             currentIndex--;
             setPositionByIndex();
         }
@@ -142,4 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('touchend', handleTouchEnd);
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('touchmove', handleTouchMove);
+
+    // Inicializa o carrossel
+    setPositionByIndex();
 });
