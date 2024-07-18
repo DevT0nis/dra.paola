@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const carousel = document.getElementById('reviews-carousel');
 
-  
-
     reviewsData.forEach((review) => {
         const reviewCard = document.createElement('div');
         reviewCard.className = 'review-card';
@@ -13,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const avatar = document.createElement('img');
         avatar.className = 'avatar';
         avatar.src = review.avatar;
-
 
         const clientName = document.createElement('span');
         clientName.className = 'client-name';
@@ -52,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const setCarouselPosition = () => {
-        carousel.style.transition = 'transform 0.5s ease-in-out';
         carousel.style.transform = `translateX(${currentTranslate}px)`;
     };
 
@@ -70,60 +66,75 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    carousel.addEventListener('mousedown', (event) => {
+    const animation = () => {
+        setCarouselPosition();
+        if (isDragging) {
+            requestAnimationFrame(animation);
+        }
+    };
+
+    const handleMouseDown = (event) => {
         isDragging = true;
         startPos = event.clientX;
+        prevTranslate = currentTranslate;
+        carousel.style.transition = 'none';
         animationID = requestAnimationFrame(animation);
         carousel.classList.add('grabbing');
-    });
+    };
 
-    carousel.addEventListener('touchstart', (event) => {
+    const handleTouchStart = (event) => {
         isDragging = true;
         startPos = event.touches[0].clientX;
+        prevTranslate = currentTranslate;
+        carousel.style.transition = 'none';
         animationID = requestAnimationFrame(animation);
         carousel.classList.add('grabbing');
-    });
+    };
 
-    window.addEventListener('mouseup', () => {
+    const handleMouseUp = () => {
         if (isDragging) {
             isDragging = false;
             cancelAnimationFrame(animationID);
             carousel.classList.remove('grabbing');
-            const movedBy = currentTranslate - prevTranslate;
-            if (movedBy < -5) moveToNext();
-            if (movedBy > 5) moveToPrev();
-            else setPositionByIndex();
-        }
-    });
-
-    window.addEventListener('touchend', () => {
-        if (isDragging) {
-            isDragging = false;
-            cancelAnimationFrame(animationID);
-            carousel.classList.remove('grabbing');
+            carousel.style.transition = 'transform 0.3s ease-out';
             const movedBy = currentTranslate - prevTranslate;
             if (movedBy < -50) moveToNext();
-            if (movedBy > 50) moveToPrev();
+            else if (movedBy > 50) moveToPrev();
             else setPositionByIndex();
         }
-    });
+    };
 
-    window.addEventListener('mousemove', (event) => {
+    const handleTouchEnd = () => {
+        if (isDragging) {
+            isDragging = false;
+            cancelAnimationFrame(animationID);
+            carousel.classList.remove('grabbing');
+            carousel.style.transition = 'transform 0.3s ease-out';
+            const movedBy = currentTranslate - prevTranslate;
+            if (movedBy < -50) moveToNext();
+            else if (movedBy > 50) moveToPrev();
+            else setPositionByIndex();
+        }
+    };
+
+    const handleMouseMove = (event) => {
         if (isDragging) {
             const currentPosition = event.clientX;
             currentTranslate = prevTranslate + currentPosition - startPos;
         }
-    });
+    };
 
-    window.addEventListener('touchmove', (event) => {
+    const handleTouchMove = (event) => {
         if (isDragging) {
             const currentPosition = event.touches[0].clientX;
             currentTranslate = prevTranslate + currentPosition - startPos;
         }
-    });
-
-    const animation = () => {
-        setCarouselPosition();
-        if (isDragging) requestAnimationFrame(animation);
     };
+
+    carousel.addEventListener('mousedown', handleMouseDown);
+    carousel.addEventListener('touchstart', handleTouchStart);
+    window.addEventListener('mouseup', handleMouseUp);
+    window.addEventListener('touchend', handleTouchEnd);
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('touchmove', handleTouchMove);
 });
