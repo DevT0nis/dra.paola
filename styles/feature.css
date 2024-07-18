@@ -4,39 +4,13 @@
     padding: 0;
     overflow-x: hidden;
     height: 100vh;
-    width: 100vw;
+    width: 99vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 50px;
 }
-
-
-.nav-button {
-    background-color: rgba(0, 0, 0, 0.5);
-   width: 50px;
-   height: 50px;
-    border-radius: 100%;
-    color: white;
-    font-size: 24px;
-    padding: 10px;
-    cursor: pointer;
-    position: absolute;
-    top: 80%;
-    transform: translateY(-50%);
-    z-index: 2;
-}
-
-
-#prevButton {
-    left: 10px;
-}
-
-#nextButton {
-    right: 10px;
-}
-
 
 
 .title {
@@ -48,8 +22,7 @@
 
 .review-section {
     height: 70vh;
-    width: 90vw;
-    max-width: 1200px;
+    width: 70vw;
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
@@ -59,6 +32,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .avatar {
@@ -110,13 +84,36 @@
     display: flex;
     transition: transform 0.5s ease-in-out;
     cursor: grab;
-    width: 50%;
+    width: 100%;
     gap: 50px;
-    
 }
 
+.nav-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+#prevButton {
+    left: 10px;
+}
+
+#nextButton {
+    right: 10px;
+}
+
+
 .review-card {
-    flex: 0 0 80%;
+    flex: 0 0 35%;
     box-sizing: border-box;
     padding: 20px;
     height: auto;
@@ -138,7 +135,6 @@
     backdrop-filter: blur(10px);
     transform-origin: center center;
     transition: transform 0.3s ease;
-
 }
 
 .review-card:hover {
@@ -182,11 +178,11 @@
     }
 
     .review-card {
-        flex: 0 0 150%; /* Mostrar apenas um card por vez */
+        flex: 0 0 150%;
         width: 100%;
         height: auto;
         padding: 10px;
-        margin: 0 5px; /* Espaçamento reduzido entre os cards */
+        margin: 0 5px;
     }
 
     .client-name {
@@ -212,13 +208,14 @@
     }
 
     .review-card {
-        flex: 0 0 150%; /* Mostrar apenas um card por vez */
+        flex: 0 0 150%;
         width: 100%;
         height: auto;
         padding: 10px;
-        margin: 0 5px; /* Espaçamento reduzido entre os cards */
+        margin: 0 5px;
         padding: 15px;    
     }
+
     .client-name {
         font-size: 20px;
     }
@@ -232,7 +229,8 @@
     }
 }
 
-@media (max-width: 480px) {
+/* iOS-specific styles */
+@media screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
     .title {
         font-size: 20px;
     }
@@ -243,15 +241,15 @@
     }
 
     .carousel {
-        gap: 0; /* Remover o espaçamento entre cards */
+        gap: 0;
     }
 
     .review-card {
-        flex: 0 0 150%; /* Mostrar apenas um card por vez */
+        flex: 0 0 150%;
         width: 100%;
         height: auto;
         padding: 10px;
-        margin: 0 5px; /* Espaçamento reduzido entre os cards */
+        margin: 0 5px;
     }
 
     .client-name {
@@ -266,32 +264,89 @@
     .stars {
         font-size: 14px;
     }
+
+ 
+
+
+}
+
+/* Android-specific styles */
+@media screen and (max-width: 480px) and (orientation: portrait) {
+    .title {
+        font-size: 20px;
+    }
+    .nav-button {
+        top: 80%;
+
+     
+
+    }
+
+    .review-section {
+        width: 100vw;
+        padding: 10px;
+    }
+
+    .carousel {
+        gap: 0;
+    }
+
+    .review-card {
+        flex: 0 0 96%;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        margin: 0 5px;
+    }
+
+    .client-name {
+        font-size: 18px;
+    }
+
+    .comment {
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .stars {
+        font-size: 14px;
+    }
+
+
+  
 }
 
 @media (max-width: 360px) {
+    .sec-avaliacoes{
+        width: 100%;
+    }
     .title {
         font-size: 18px;
+    }
+
+    .review-section {
+        width: 110vw;
+        height: 100vh;
+    }
+
+    .nav-button {
+        top: 80%;
+
+     
+
+    }
+
+    .review-card {
+        flex: 0 0 94%;
+        width: 110%;
+        height: auto;
+        padding: 10px;
+        margin: 0 5px;
     }
 
     .client-name {
         font-size: 16px;
     }
-
-    .review-section {
-        width: 120vw;
-        height: 100vh;
-   
-    }
-
- 
-    .review-card {
-        flex: 0 0 150%; /* Mostrar apenas um card por vez */
-        width: 100%;
-        height: auto;
-        padding: 10px;
-        margin: 0 5px; /* Espaçamento reduzido entre os cards */
-    }
-
 
     .comment {
         font-size: 12px;
