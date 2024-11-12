@@ -1,0 +1,216 @@
+/* Estilos Gerais do Blog */
+.blog {
+    padding: 2rem 1rem;
+    background-color: #f8f8f8;
+}
+
+.blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+}
+
+.blog-header h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.blog-header .view-more-container {
+    margin-top: 0.5rem;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    padding: 0 1rem;
+}
+
+.cards-blog {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    gap: 1rem;
+  
+    height: 300px;
+    /* Permite rolagem suave em dispositivos móveis */
+    scroll-behavior: smooth;
+    /* Previne quebra de linha */
+    flex-wrap: nowrap;
+}
+
+.card-conteudo {
+    flex: 0 0 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-conteudo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-conteudo h4 {
+    padding: 1rem;
+    font-size: 1rem;
+    color: #333;
+    flex-grow: 1;
+}
+
+/* Botões do Carrossel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Botão "View More" */
+#view-more {
+    background-color: #D3A48F;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+}
+
+#view-more:hover {
+    background-color: #b88e7a;
+}
+
+/* Media Queries para Responsividade */
+
+/* Tablets (Largura entre 768px e 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .card-conteudo {
+        flex: 0 0 250px;
+    }
+
+    .blog-header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .blog-header h2 {
+        font-size: 1.75rem;
+    }
+
+    #view-more {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Dispositivos Móveis (Largura até 767px) */
+@media (max-width: 767px) {
+    .blog-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .blog-header h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .blog-header .view-more-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .card-conteudo {
+        flex: 0 0 250px; /* Reduzido para melhor adaptação em telas menores */
+        max-width: 250px;
+        margin-right: 1rem;
+    }
+
+    /* Mantém o carrossel em linha */
+    .cards-blog {
+        flex-direction: row; /* Garante que os cartões fiquem em linha */
+        overflow-x: auto; /* Habilita a rolagem horizontal */
+        -webkit-overflow-scrolling: touch; /* Suaviza o scroll em iOS */
+    }
+
+    /* Esconde as barras de rolagem para uma aparência mais limpa */
+    .cards-blog::-webkit-scrollbar {
+        display: none;
+    }
+
+    .cards-blog {
+        -ms-overflow-style: none;  /* IE e Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    .carousel-btn {
+        display: none; /* Oculta os botões no mobile */
+    }
+
+    #view-more {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Laptops e Desktops Grandes (Largura acima de 1024px) */
+@media (min-width: 1025px) {
+    .card-conteudo {
+        flex: 0 0 300px;
+    }
+
+    .blog-header h2 {
+        font-size: 2.5rem;
+    }
+
+    #view-more {
+        padding: 0.75rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    .carousel-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.6rem;
+    }
+}

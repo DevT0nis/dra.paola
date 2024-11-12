@@ -1,71 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
-    <title>Dra Paola Trindade</title>
+    <title>Dra Paola Trindade - Coloproctologista</title>
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/feature.css">
-     <script src="./js/index.js"></script>
-     <script src="./js/data.js"></script>
-     <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="styles/blog.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init({
-              publicKey: "vhgcHGCck7g5DWbIw",
-            });
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // these IDs from the previous steps
-                emailjs.sendForm('contact_service', 'contact_form', this)
-                    .then(() => {
-                        console.log('SUCCESS!');
-                    }, (error) => {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
-   
-    
 </head>
-
 <body>
-
     <header>
         <div class="icons-navbar">
-            <div class="tel-header ">
-                <img class="icon-contato" src="./img/tel-icon.svg" alt="">
+            <div class="tel-header">
+                <img class="icon-contato" src="./img/tel-icon.svg" alt="Ícone de telefone">
                 <p>(11) 98695-6577</p>
             </div>
             <div class="icons-header">
-                <a href="https://www.linkedin.com/in/drapaolameinicke" target="_blank" rel="noopener noreferrer"><img
-                        class="icon-redes" src="./img/linkdlin.svg" alt=""></a>
-                <a href="https://www.instagram.com/drapaola.procto/" target="_blank" rel="noopener noreferrer"><img
-                        class="icon-redes" src="./img/Insta-icon.svg" alt=""></a>
-                <a href="https://api.whatsapp.com/send/?phone=5511986956577&text&type=phone_number&app_absent=0"
-                    target="_blank" rel="noopener noreferrer"><img class="icon-redes" src="./img/Whatssap-icon.svg"
-                        alt=""></a>
-                <a href="mailto:contatodrapaolaprocto@gmail.com"> <img class="icon-redes" src="./img/mail-icon.svg"
-                        alt=""></a>
+                <a href="https://www.linkedin.com/in/drapaolameinicke" target="_blank" rel="noopener noreferrer">
+                    <img class="icon-redes" src="./img/linkdlin.svg" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com/drapaola.procto/" target="_blank" rel="noopener noreferrer">
+                    <img class="icon-redes" src="./img/Insta-icon.svg" alt="Instagram">
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=5511986956577&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                    <img class="icon-redes" src="./img/Whatssap-icon.svg" alt="WhatsApp">
+                </a>
+                <a href="mailto:contatodrapaolaprocto@gmail.com">
+                    <img class="icon-redes" src="./img/mail-icon.svg" alt="E-mail">
+                </a>
             </div>
         </div>
 
-        <div class="navbar">
-            <a href="../index.html"><img src="../img/Logo-PM.svg" alt="Logo"></a>
-
+        <nav class="navbar">
+            <a href="./index.html"><img src="./img/Logo-PM.svg" alt="Logo Dra. Paola Meinicke"></a>
             <div class="nav-itens">
                 <ul class="list-nav">
                     <li><a href="#">Home</a></li>
@@ -74,73 +46,52 @@
                     <li><a href="#blog">Blog</a></li>
                     <li><a href="#local">Localização</a></li>
                 </ul>
-                <button class="btn-header"> <a
-                        href="https://drapaolatmeinicke.agendar.cc/#/perfil/262616" target="_blank"
-                        rel="noopener noreferrer" style="color: #D3A48F;">Agende uma consulta</a></button>
+                <a href="https://api.whatsapp.com/send/?phone=%2B5511986956577&text=Ol%C3%A1%2C+encontrei+a+Dra+Paola+Meinicke+Proctolgista+no+Google+e+gostaria+de+agendar+uma+consulta&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="btn-header">Agende uma consulta</a>
             </div>
-        </div>
+        </nav>
     </header>
+
     <main>
         <section class="conteiner-about">
-            <div class="bg-about">
-
-            </div>
+            <div class="bg-about"></div>
             <article class="article-about" id="about">
-                <img src="./img/img-paola.jpg" alt="Foto Dra Paola" width="400px"
-                    style="border-radius: 100%; border:#D3A48F solid ;">
+                <img src="./img/img-paola.jpg" alt="Foto Dra Paola" width="400" style="border-radius: 100%; border: 2px solid #D3A48F;">
                 <div>
                     <h1>Dra Paola Trindade Meinicke</h1>
-                    <p>Dra. Paola Meinicke é uma Médica Coloproctologista dedicada ao
-                        cuidado integral de seus pacientes. Com uma formação sólida, graduou-se em
-                        Medicina pela Universidade Vila Velha, no Espírito Santo, e realizou sua Residência
-                        Médica em Cirurgia Geral e Coloproctologia no Hospital Heliópolis, em São Paulo.
-                        Além disso, é membro filiado da Sociedade Brasileira de Coloproctologia.</p>
-                    <p>Com uma vasta experiência, a Dra. Paola oferece atendimentos especializados em
-                        coloproctologia, abrangendo uma ampla gama de condições, como Doenças
-                        Inflamatórias Intestinais, Doenças Orificiais, Câncer Colorretal, entre outras. Seu
-                        compromisso com a excelência se reflete em sua prática clínica, onde realiza
-                        cirurgias coloproctológicas e procedimentos como ligadura elástica para o
-                        tratamento da Doença Hemorroidária no consultório, além de anuscopia com laudo.</p>
-                    <p>O diferencial da Dra. Paola reside em seus pilares fundamentais: acolhimento,
-                        respeito, empatia e tratamento individualizado. Buscando estreitar ainda mais a
-                        relação médico-paciente, ela oferece um ambiente acolhedor e um cuidado
-                        personalizado, garantindo o melhor atendimento possível a cada indivíduo que
-                        busca seus serviços.</p>
+                    <p>Dra. Paola Meinicke é uma Médica Coloproctologista dedicada ao cuidado integral de seus pacientes. Com uma formação sólida, graduou-se em Medicina pela Universidade Vila Velha, no Espírito Santo, e realizou sua Residência Médica em Cirurgia Geral e Coloproctologia no Hospital Heliópolis, em São Paulo. Além disso, é membro filiado da Sociedade Brasileira de Coloproctologia.</p>
+                    <p>Com uma vasta experiência, a Dra. Paola oferece atendimentos especializados em coloproctologia, abrangendo uma ampla gama de condições, como Doenças Inflamatórias Intestinais, Doenças Orificiais, Câncer Colorretal, entre outras. Seu compromisso com a excelência se reflete em sua prática clínica, onde realiza cirurgias coloproctológicas e procedimentos como ligadura elástica para o tratamento da Doença Hemorroidária no consultório, além de anuscopia com laudo.</p>
+                    <p>O diferencial da Dra. Paola reside em seus pilares fundamentais: acolhimento, respeito, empatia e tratamento individualizado. Buscando estreitar ainda mais a relação médico-paciente, ela oferece um ambiente acolhedor e um cuidado personalizado, garantindo o melhor atendimento possível a cada indivíduo que busca seus serviços.</p>
                     <div class="redes-about">
-                        <a href="https://www.linkedin.com/in/drapaolameinicke" target="_blank"
-                            rel="noopener noreferrer"><img class="icon-redes" src="./img/linkdlin.svg" alt=""></a>
-
-
-                        <a href="https://www.instagram.com/drapaola.procto/" target="_blank"
-                            rel="noopener noreferrer"><img class="icon-redes" src="./img/Insta-icon.svg""></a>
-
-
-                        <a href="
-                                https://api.whatsapp.com/send/?phone=5511986956577&text&type=phone_number&app_absent=0"
-                                target="_blank" rel="noopener noreferrer"><img class="icon-redes"
-                                src="./img/Whatssap-icon.svg" alt=""></a>
-
-
-                        <a href="mailto:contatodrapaolaprocto@gmail.com"> <img class="icon-redes"
-                                src="./img/mail-icon.svg" alt=""></a>
+                        <a href="https://www.linkedin.com/in/drapaolameinicke" target="_blank" rel="noopener noreferrer">
+                            <img class="icon-redes" src="./img/linkdlin.svg" alt="LinkedIn">
+                        </a>
+                        <a href="https://www.instagram.com/drapaola.procto/" target="_blank" rel="noopener noreferrer">
+                            <img class="icon-redes" src="./img/Insta-icon.svg" alt="Instagram">
+                        </a>
+                        <a href="https://api.whatsapp.com/send/?phone=5511986956577&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                            <img class="icon-redes" src="./img/Whatssap-icon.svg" alt="WhatsApp">
+                        </a>
+                        <a href="mailto:contatodrapaolaprocto@gmail.com">
+                            <img class="icon-redes" src="./img/mail-icon.svg" alt="E-mail">
+                        </a>
                     </div>
                 </div>
             </article>
             <section class="training-about">
-
                 <div class="training-icons">
-                    <img src="./img/capelo-icon.svg" alt="Icone Capelo">
+                    <img src="./img/capelo-icon.svg" alt="Ícone Capelo">
                     <p>Graduação em Medicina na Universidade Vila Velha - Espírito Santo</p>
                 </div>
                 <div class="training-icons">
-                    <img src="./img/icon-medic.svg" alt="Icone Medica">
+                    <img src="./img/icon-medic.svg" alt="Ícone Médica">
                     <p>Residência Médica em Cirurgia Geral no Hospital Heliópolis - São Paulo</p>
                 </div>
-
-                <div class="training-icons"><img src="./img/icon-medic.svg" alt="Icone Medica">
+                <div class="training-icons">
+                    <img src="./img/icon-medic.svg" alt="Ícone Médica">
                     <p>Residência Médica em Coloproctologia no Hospital Heliópolis - São Paulo</p>
                 </div>
-                <div class="training-icons"><img src="./img/icon-medic.svg" alt="Icone Medica">
+                <div class="training-icons">
+                    <img src="./img/icon-medic.svg" alt="Ícone Médica">
                     <p>Membro Filiado da Sociedade Brasileira de Coloproctologia</p>
                 </div>
             </section>
@@ -148,139 +99,112 @@
 
         <section class="treatment" id="treatment">
             <h2>Atendimentos</h2>
-
             <div class="cards">
                 <div class="card-treatment">
-                    <h3> Doença Diverticular</h3>
+                    <h3>Doença Diverticular</h3>
                     <ul>
-                        <li> Tratamento especializado para a Doença Diverticular,
-                            visando o alívio dos sintomas e a melhoria da qualidade de vida.
-                        </li>
-
+                        <li>Tratamento especializado para a Doença Diverticular, visando o alívio dos sintomas e a melhoria da qualidade de vida.</li>
                     </ul>
                 </div>
                 <div class="card-treatment">
                     <h3>Câncer Colorretal</h3>
                     <ul>
-                        <li> Abordagem integral e cuidadosa para o diagnóstico e
-                            tratamento do Câncer Colorretal, priorizando a saúde e o bem-estar dos pacientes.</li>
-
+                        <li>Abordagem integral e cuidadosa para o diagnóstico e tratamento do Câncer Colorretal, priorizando a saúde e o bem-estar dos pacientes.</li>
                     </ul>
                 </div>
                 <div class="card-treatment">
                     <h3>Pólipos Intestinais</h3>
                     <ul>
-                        <li>Avaliação e remoção de pólipos intestinais de forma segura
-                            e eficaz, visando a prevenção do desenvolvimento de câncer colorretal. </li>
-
+                        <li>Avaliação e remoção de pólipos intestinais de forma segura e eficaz, visando a prevenção do desenvolvimento de câncer colorretal.</li>
                     </ul>
                 </div>
                 <div class="card-treatment">
                     <h3>Constipação Intestinal</h3>
                     <ul>
-                        <li>Tratamento individualizado para a constipação
-                            intestinal, visando restaurar o conforto e a regularidade do trânsito intestinal. </li>
+                        <li>Tratamento individualizado para a constipação intestinal, visando restaurar o conforto e a regularidade do trânsito intestinal.</li>
                     </ul>
                 </div>
                 <div class="card-treatment">
                     <h3>Cirurgias Coloproctológicas</h3>
                     <ul>
-                        <li>Realização de cirurgias coloproctológicas com
-                            expertise e cuidado, garantindo resultados eficazes e uma recuperação tranquila
-                            para os pacientes. </li>
+                        <li>Realização de cirurgias coloproctológicas com expertise e cuidado, garantindo resultados eficazes e uma recuperação tranquila para os pacientes.</li>
                     </ul>
                 </div>
                 <div class="card-treatment">
                     <h3>Ligadura Elástica</h3>
                     <ul>
-                        <li>Procedimento realizado no consultório para o tratamento da
-                            Doença Hemorroidária, oferecendo uma solução eficaz e minimamente invasiva
-                            para o alívio dos sintomas e a melhoria da qualidade de vida.</li>
+                        <li>Procedimento realizado no consultório para o tratamento da Doença Hemorroidária, oferecendo uma solução eficaz e minimamente invasiva para o alívio dos sintomas e a melhoria da qualidade de vida.</li>
                     </ul>
                 </div>
                 <div class="card-treatment">
                     <h3>Anuscopia com Laudo</h3>
                     <ul>
-                        <li> Procedimento de anuscopia realizado com precisão e
-                            acompanhado de laudo detalhado, fornecendo informações importantes para o
-                            diagnóstico e tratamento adequados.</li>
+                        <li>Procedimento de anuscopia realizado com precisão e acompanhado de laudo detalhado, fornecendo informações importantes para o diagnóstico e tratamento adequados.</li>
                     </ul>
                 </div>
-
                 <div class="card-treatment">
                     <h3>Cirurgia para Tratamento de Cisto Pilonidal</h3>
                     <ul>
-                        <li> Procedimento minimamente invasivo para eliminar o desconforto do cisto pilonidal, oferecendo rápida
-                            recuperação e podendo ser realizado no consultório.</li>
+                        <li>Procedimento minimamente invasivo para eliminar o desconforto do cisto pilonidal, oferecendo rápida recuperação e podendo ser realizado no consultório.</li>
                     </ul>
                 </div>
-
                 <div class="card-treatment">
                     <h3>Plicomas com Laser</h3>
                     <ul>
-                        <li> Tratamento inovador e minimamente invasivo para
-                            plicomas, utilizando laser para uma remoção confortável, rápida recuperação e
-                            possível realização no consultório.</li>
+                        <li>Tratamento inovador e minimamente invasivo para plicomas, utilizando laser para uma remoção confortável, rápida recuperação e possível realização no consultório.</li>
                     </ul>
                 </div>
-
             </div>
-            </div>
-
-            <button class="btn-scheduling"><a
-                    href="https://drapaolatmeinicke.agendar.cc/#/perfil/262616" target="_blank"
-                    rel="noopener noreferrer" style="color: aliceblue;">Agende uma consulta</a></button>
+            <a href="https://api.whatsapp.com/send/?phone=%2B5511986956577&text=Ol%C3%A1%2C+encontrei+a+Dra+Paola+Meinicke+Proctolgista+no+Google+e+gostaria+de+agendar+uma+consulta&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="btn-scheduling">Agende uma consulta</a>
         </section>
+
         <section class="conteiner-contact" id="contact">
             <h3>Entre em Contato</h3>
             <form id="contact-form">
-                <fildset class="input-group1">
+                <fieldset class="input-group1">
                     <input type="text" placeholder="Nome Completo" id="name" required>
                     <input type="email" placeholder="Email" id="email" required>
                     <input type="tel" placeholder="Telefone" id="tel">
-                </fildset>
-                <fildset class="input-group2">
+                </fieldset>
+                <fieldset class="input-group2">
                     <input type="text" placeholder="Assunto" id="subject" required>
-                    <input type="text" placeholder="Mensagem" id="message" required>
-                    <button class="btn-primary" onclick="sendMail()">Enviar!</button>
-                </fildset>
+                    <textarea placeholder="Mensagem" id="message" required></textarea>
+                    <button type="submit" class="btn-primary">Enviar!</button>
+                </fieldset>
             </form>
         </section>
+
         <section class="local" id="local">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.7156283012914!2d-46.5774103!3d-23.5427283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5f093edd2499%3A0xeb2c670dd52ead1d!2sDra. Paola Meinicke - Coloproctologista!5e0!3m2!1spt-BR!2sbr!4v1719428588735!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.7156283012914!2d-46.5774103!3d-23.5427283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5f093edd2499%3A0xeb2c670dd52ead1d!2sDra.%20Paola%20Meinicke%20-%20Coloproctologista!5e0!3m2!1spt-BR!2sbr!4v1719428588735!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div class="adress-info">
                 <div class="local-info">
                     <div class="title-info">
-                        <img src="./img/local-icon.svg" alt="">
-                        <h5>Consultorio Tatuapé</h5>
+                        <img src="./img/local-icon.svg" alt="Ícone de localização">
+                        <h5>Consultório Tatuapé</h5>
                     </div>
-                    <p class="p-info">ENDEREÇO: Rua Bom Sucesso, 220 - 15º andar - Sala 1516. Edifício Platina Torre
-                        Office Tatuapé, São Paulo/SP</p>
+                    <p class="p-info">ENDEREÇO: Rua Bom Sucesso, 220 - 15º andar - Sala 1516. Edifício Platina Torre Office Tatuapé, São Paulo/SP</p>
                 </div>
                 <div class="info">
-                    <img src="./img/mail-icon.svg" alt="icone email">
-                    <a href="mailto:contatodrapaolaprocto@gmail.com" target="_blank" rel="noopener noreferrer"
-                        style="text-decoration: none;">
+                    <img src="./img/mail-icon.svg" alt="Ícone de e-mail">
+                    <a href="mailto:contatodrapaolaprocto@gmail.com" target="_blank" rel="noopener noreferrer">
                         <p class="p-info">contatodrapaolaprocto@gmail.com</p>
                     </a>
                 </div>
                 <div class="info">
-                    <img src="img/Whatssap-icon.svg" alt="icone whatssap">
-                    <a href="https://api.whatsapp.com/send/?phone=5511986956577&text&type=phone_number&app_absent=0"
-                        target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                    <img src="img/Whatssap-icon.svg" alt="Ícone do WhatsApp">
+                    <a href="https://api.whatsapp.com/send/?phone=5511986956577&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
                         <p class="p-info">(11) 98695-6577</p>
                     </a>
                 </div>
                 <div class="info">
-                    <img src="./img/tel-icon.svg" alt="icone telefone">
+                    <img src="./img/tel-icon.svg" alt="Ícone de telefone">
                     <p class="p-info">(11) 98695-6577</p>
                 </div>
-            </div>
             </div>
         </section>
 
         <section class="sec-avaliacoes">
-            <h1 class="title">Avaliações de Clientes</h1>
+            <h2 class="title">Avaliações de Clientes</h2>
             <div class="review-section"> 
                 <div id="carousel-container" class="carousel-container">
                     <div id="reviews-carousel" class="carousel"></div>
@@ -291,67 +215,87 @@
                 </div>
             </div>
         </section>
-        
 
         <section class="blog" id="blog">
-            <div class="title-blog">
-                <h4>Blog</h4>
+            <div class="blog-header">
+                <h2>Blog</h2>
+                <div class="info-blog">
+                    <h3>Posts Recentes</h3>
+                  
+                </div>
             </div>
-            <div class="info-blog">
-                <h4>Posts Recentes</h4>
-                <button>Ver mais</button>
-            </div>
-            <div class="cards-blog">
-                <div class="card-conteudo">
-                    <a href="/pages/blog.html"><img src="./img/outrafoto.jpg" alt="" width="300" ></a>
-                    <div>
-                        <h5>Descubra se você deve buscar ajuda de um médico coloproctologista.</h5>
-                    </div>
-                </div>
-
-                <div class="card-conteudo">
-                    <a href="/pages/artigo5.html"><img src="./img/Hemorroidectomia_ Conheça os tipos de cirurgia para hemorroidas.png" alt="" width="300" ></a>
-                    <div>
-                        <h5>Hemorroidectomia: Conheça os Tipos de Cirurgia para Hemorroidas.</h5>
-                    </div>
-                </div>
-
-                <div class="card-conteudo">
-                    <a href="./pages/artigo2.html" target="_self">
-                        <img src="./img/Quando Procurar um Coloproctologista_ Entenda a Importância da Prevenção.png" alt=""
-                            width="300">
-                    </a>
-                    <div>
-                        <a href="./pages/artigo2.html" target="_self">
-                            <h5>Quando Procurar um Coloproctologista: Entenda a Importância da Prevenção</h5>
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn" aria-label="Anterior">&#10094;</button>
+                <div class="cards-blog">
+                    <div class="card-conteudo">
+                        <a href="/pages/blog.html">
+                            <img src="./img/outrafoto.jpg" alt="Descubra se você deve buscar ajuda de um médico coloproctologista" loading="lazy">
+                            <h4>Descubra se você deve buscar ajuda de um médico coloproctologista.</h4>
                         </a>
                     </div>
-                </div>
-
-                <div class="card-conteudo">
-                    <a href="./pages/artigo3.html" target="_self"><img src="./img/IMG_2945.JPG" alt="" width="300" height="205px"></a>
-                    <div>
+                    <div class="card-conteudo">
+                        <a href="/pages/artigo5.html">
+                            <img src="./img/Hemorroidectomia_ Conheça os tipos de cirurgia para hemorroidas.png" alt="Hemorroidectomia: Conheça os Tipos de Cirurgia para Hemorroidas" loading="lazy">
+                            <h4>Hemorroidectomia: Conheça os Tipos de Cirurgia para Hemorroidas.</h4>
+                        </a>
+                    </div>
+                    <div class="card-conteudo">
+                        <a href="./pages/artigo2.html">
+                            <img src="./img/Quando Procurar um Coloproctologista_ Entenda a Importância da Prevenção.png" alt="Quando Procurar um Coloproctologista: Entenda a Importância da Prevenção" loading="lazy">
+                            <h4>Quando Procurar um Coloproctologista: Entenda a Importância da Prevenção</h4>
+                        </a>
+                    </div>
+                    <div class="card-conteudo">
                         <a href="./pages/artigo3.html">
-                            <h5>As Melhores Técnicas Cirúrgicas para Hemorroidas</h5>
+                            <img src="./img/IMG_2945.JPG" alt="As Melhores Técnicas Cirúrgicas para Hemorroidas" loading="lazy">
+                            <h4>As Melhores Técnicas Cirúrgicas para Hemorroidas</h4>
                         </a>
                     </div>
-                </div>
+                    <div class="card-conteudo">
+                        <a href="./pages/artigo4.html">
+                            <img src="./img/Fissura anal_ conheça os sintomas, causas e tratamentos.png" alt="Fissura anal: conheça os sintomas, causas e tratamentos" loading="lazy">
+                            <h4>Fissura anal: conheça os sintomas, causas e tratamentos.</h4>
+                        </a>
+                    </div>
 
-                <div class="card-conteudo">
-                    <a href="./pages/artigo4.html" target="_self"><img src="./img/Fissura anal_ conheça os sintomas, causas e tratamentos.png" alt="" width="300" height="205px"></a>
-                    <div>
-                        <a href="./pages/artigo3.html">
-                            <h5>Fissura anal: conheça os sintomas, causas e tratamentos.</h5>
+                    <div class="card-conteudo">
+                        <a href="./pages/artigo5.html">
+                            <img src="./img/Hemorroidectomia_ Conheça os tipos de cirurgia para hemorroidas.png" alt="Fissura anal: conheça os sintomas, causas e tratamentos" width="300" height="205">
+                            <h4>      Hemorroidectomia: Conheça os Tipos de Cirurgia para
+                                Hemorroidas.</h4>
                         </a>
                     </div>
+
+                    <div class="card-conteudo">
+                        <a href="./pages/artigo6.html">
+                            <img src="./img/Cisto Pilonidal_ O que é.png" alt="Fissura anal: conheça os sintomas, causas e tratamentos" width="300" height="205">
+                            <h4>Cisto Pilonidal: O que é?</h4>
+                        </a>
+                    </div>
+
+                    <div class="card-conteudo">
+                        <a href="./pages/artigo7.html">
+                            <img src="./img/Pós-operatório de hemorroida_ entenda sobre o procedimento.png" alt="Fissura anal: conheça os sintomas, causas e tratamentos" width="300" height="205">
+                            <h4>Pós-operatório de Hemorroida: Entenda Sobre o Procedimento</h4>
+                        </a>
+                    </div>
+
+                    <div class="card-conteudo">
+                        <a href="./pages/artigo8.html">
+                            <img src="./img/Novembro Azul_ A Importância da Prevenção do Câncer de Próstata.png" alt="Fissura anal: conheça os sintomas, causas e tratamentos" width="300" height="205">
+                            <h4>Novembro Azul: A Importância da Prevenção do Câncer de Próstata.</h4>
+                        </a>
+                    </div>
+         
                 </div>
+                <button class="carousel-btn next-btn" aria-label="Próximo">&#10095;</button>
             </div>
         </section>
-
     </main>
+
     <footer>
         <div class="logo-footer">
-            <img src="./img/logo.png" width="250" alt="">
+            <img src="./img/logo.png" width="250" alt="Logo Dra. Paola Trindade Meinicke">
             <p>© Dra. Paola Trindade Meinicke - Coloproctologia</p>
         </div>
         <div class="nav-footer">
@@ -365,36 +309,58 @@
                     <li><a href="#local">Localização</a></li>
                 </ul>
             </div>
-
             <div class="contact-nav">
                 <h4>Contatos</h4>
                 <div class="info-nav">
-                    <img src="./img/mail-icon.svg" alt="icone email">
+                    <img src="./img/mail-icon.svg" alt="Ícone de e-mail">
                     <p>contatodrapaolaprocto@gmail.com</p>
                 </div>
                 <div class="info-nav">
-                    <img src="./img/Whatssap-icon.svg" alt="icone whatssap">
+                    <img src="./img/Whatssap-icon.svg" alt="Ícone do WhatsApp">
                     <p>(11) 98695-6577</p>
                 </div>
                 <div class="info-nav">
-                    <img src="./img/tel-icon.svg" alt="icone telefone">
+                    <img src="./img/tel-icon.svg" alt="Ícone de telefone">
                     <p>(11) 98695-6577</p>
                 </div>
             </div>
-
             <div class="icons-nav">
-
-                <a href="https://www.linkedin.com/in/drapaolameinicke" target="_blank" rel="noopener noreferrer"><img
-                        class="icon-redes" src="./img/linkdlin.svg" alt=""></a>
-                <a href="https://www.instagram.com/drapaola.procto/" target="_blank" rel="noopener noreferrer"><img
-                        class="icon-redes" src="./img/Insta-icon.svg" alt=""></a>
-                <a href="https://api.whatsapp.com/send/?phone=5511986956577&text&type=phone_number&app_absent=0"
-                    target="_blank" rel="noopener noreferrer"><img class="icon-redes" src="./img/whatssap-icon.svg"
-                        alt=""></a>
+                <a href="https://www.linkedin.com/in/drapaolameinicke" target="_blank" rel="noopener noreferrer">
+                    <img class="icon-redes" src="./img/linkdlin.svg" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com/drapaola.procto/" target="_blank" rel="noopener noreferrer">
+                    <img class="icon-redes" src="./img/Insta-icon.svg" alt="Instagram">
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=5511986956577&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                    <img class="icon-redes" src="./img/whatssap-icon.svg" alt="WhatsApp">
+                </a>
             </div>
         </div>
     </footer>
+
+    <script src="js/index.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/blog.js"></script>
+    <script>
+        (function() {
+            emailjs.init({
+                publicKey: "vhgcHGCck7g5DWbIw",
+            });
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            emailjs.sendForm('contact_service', 'contact_form', this)
+                .then(() => {
+                    console.log('SUCCESS!');
+                    alert('Mensagem enviada com sucesso!');
+                    this.reset();
+                }, (error) => {
+                    console.log('FAILED...', error);
+                    alert('Falha ao enviar mensagem. Por favor, tente novamente.');
+                });
+        });
+    </script>
 </body>
-
-
 </html>
